@@ -1,0 +1,35 @@
+---
+// Props to allow multiple different videos to be rendered from the same component.
+const {
+	src = '/videos/BBpreview1-cirkeline_1.mp4',
+	label = 'Preview video; plays on hover or focus',
+	wrapperClass = 'w-[100%] h-96 relative bg-white rounded-[45px] overflow-hidden',
+	videoClass = 'w-[100%] h-96 left-0 top-0 absolute object-cover'
+} = Astro.props;
+---
+
+<div class={wrapperClass}>
+	<!--
+		Video plays on hover/focus and pauses on mouseleave/blur.
+		- muted + playsinline to allow autoplay on hover in modern browsers
+		- preload=metadata so browser can show first frame
+		- use root-relative /videos/... path to reference files in public/
+		- inline handlers are minimal and avoid shipping extra JS bundles
+	-->
+	<video
+		class={videoClass}
+		src={src}
+		loop
+		muted
+		playsinline
+		preload="metadata"
+		tabindex="0"
+		aria-label={label}
+		onmouseenter="(async ()=>{try{await this.play()}catch(e){}})()"
+		onmouseleave="this.pause(); this.currentTime = 0"
+		onfocus="(async ()=>{try{await this.play()}catch(e){}})()"
+		onblur="this.pause(); this.currentTime = 0"
+		onclick="(async ()=>{if(this.paused){try{await this.play()}catch(e){}}else{this.pause()}})()"
+		onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); if(this.paused){try{this.play()}catch(e){}}else{this.pause()}}"
+	></video>
+</div>
