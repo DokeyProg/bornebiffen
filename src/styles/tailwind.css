@@ -20,6 +20,31 @@
   src: url('/fonts/Domine-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Mirza-Medium';
+  src: url('/fonts/Mirza-Medium.tff') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mirza-Regular';
+  src: url('/fonts/Mirza-Regular.tff') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mirza-SemiBold';
+  src: url('/fonts/Mirza-SemiBold.tff') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mirza-Bold';
+  src: url('/fonts/Mirza-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Light.ttf') format('truetype');
+}
+
 @theme {
   /* Her tilføjes theme variable // tokens */
 
@@ -32,9 +57,11 @@
   --color-secondary-600: #F57A00;
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
+  --font-display: 'Mirza-Bold', serif;
+  --font-sans: 'Roboto', sans-serif;
   --font-serif: 'Domine', serif;
+
+
 }
 
 @layer base {
