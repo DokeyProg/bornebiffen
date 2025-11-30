@@ -7,84 +7,62 @@ import VideoStill from "../components/VideoStill.astro";
 ---
 
 <MainLayout title="Forside">
-  <main class="scroll-smooth">
+  <video src="videos/BBsequence 01_1.mp4" autoplay muted class="fixed inset-0 h-screen w-screen"></video>
+  <main class="scroll-smooth flex flex-col items-center h-full w-screen z-50!">
     <div class="relative z-100 place-self-center mb-25">
       <h1 class="font-display text-[128px] text-[#fe8b6d]">Børnebiffen</h1>
     </div>
-    <section class="relative z-101 place-self-center">
+    <section class="relative z-101 px-24">
       <div class="bg-[#fafafa97] p-15 rounded-[45px] w-[779px] flex flex-col gap-10">
-        <h4 class="font-sans text-[36px]">Juridisk information og vilkår for forældre</h4>
+        <h4 class="font-sans text-[36px]">Juridisk information og vilkår til forældrene</h4>
         <p class="font-sans text-[20px]">
-          Velkommen til bornebiffen.dk – Danmarks (måske) mest ansvarlige streamingtjeneste for børn
-          i alderen 3-7 år, hvor vi garanterer, at der aldrig nogensinde dukker en reklame for
-          energidrik eller en horror-trailer op midt i “Rasmus Klump”. Det ville være… uhørt. Inden
-          børnene slippes løs på siden, bør I lige overveje og godkende følgende:
+          Velkommen til bornebiffen.dk – Danmarks (måske) mest ansvarlige streamingtjeneste for børn i alderen 3-7 år, hvor vi garanterer, at der aldrig nogensinde dukker en reklame for energidrik eller en horror-trailer op midt i “Rasmus Klump”. Det
+          ville være… uhørt. Inden børnene slippes løs på siden, bør I lige overveje og godkende følgende:
         </p>
         <h4 class="font-sans text-[36px] text-">1. Hvem bestemmer her egentlig?</h4>
         <p class="font-sans text-[20px]">
-          Det gør I – de voksne. Børn under 13 år (og især 3-7-årige) må nemlig ikke selv indgå
-          juridisk bindende aftaler ifølge dansk lov. Så når I opretter en konto eller trykker
-          “Enig”, er det jer, der skriver under med usynligt blæk. Barnet tror bare, det er en
-          magisk knap, der starter “Cirkeline”. Lad dem beholde illusionen.
+          Det gør I – de voksne. Børn under 13 år (og især 3-7-årige) må nemlig ikke selv indgå juridisk bindende aftaler ifølge dansk lov. Så når I opretter en konto eller trykker “Enig”, er det jer, der skriver under med usynligt blæk. Barnet tror
+          bare, det er en magisk knap, der starter “Cirkeline”. Lad dem beholde illusionen.
         </p>
-        <h4 class="font-sans text-[36px] text-">
-          2. Persondata – vi samler ikke mere ind end jeres svigermor
-        </h4>
+        <h4 class="font-sans text-[36px] text-">2. Persondata – vi samler ikke mere ind end jeres svigermor</h4>
         <p class="font-sans text-[20px]">
-          Vi gemmer: - Forældrenes e-mail (så vi kan sende jer en påmindelse, når I har glemt at
-          logge ud i 47 dage) - Barnets kaldernavn eller fornavn (fx “Lilleprut” eller “Alberte” –
-          vi dømmer ikke) - Hvilke afsnit de har set 127 gange (udelukkende så vi kan foreslå nr.
-          128) Vi sælger aldrig jeres data. Vi deler det heller ikke med “relevante
-          samarbejdspartnere” – for vi har ingen. Vi er en børne-streamingtjeneste, ikke en
-          datamægler forklædt som tegnefilm. Vi overholder GDPR, Persondataloven og alt det andet, I
-          aldrig orker at læse. Hvis I vil have alt slettet, så skriv til os – så sletter vi det
-          hurtigere, end jeres barn glemmer, hvor skoene blev smidt hen.
+          Vi gemmer: - Forældrenes e-mail (så vi kan sende jer en påmindelse, når I har glemt at logge ud i 47 dage) - Barnets kaldernavn eller fornavn (fx “Lilleprut” eller “Alberte” – vi dømmer ikke) - Hvilke afsnit de har set 127 gange
+          (udelukkende så vi kan foreslå nr. 128) Vi sælger aldrig jeres data. Vi deler det heller ikke med “relevante samarbejdspartnere” – for vi har ingen. Vi er en børne-streamingtjeneste, ikke en datamægler forklædt som tegnefilm. Vi overholder
+          GDPR, Persondataloven og alt det andet, I aldrig orker at læse. Hvis I vil have alt slettet, så skriv til os – så sletter vi det hurtigere, end jeres barn glemmer, hvor skoene blev smidt hen.
         </p>
-        <h4 class="font-sans text-[36px] text-">
-          3. Cookies (ikke den spiselige slags – desværre)
-        </h4>
+        <h4 class="font-sans text-[36px] text-">3. Cookies (ikke den spiselige slags – desværre)</h4>
         <p class="font-sans text-[20px]">
-          Ja, vi bruger cookies. Nej, de er ikke nødvendige for, at “Piggy” starter. De er kun til
-          at huske, om I vil have dansk tale eller grise-lyde på originalsproget. I kan slå dem fra.
-          Så virker siden bare lidt dårligere. Valget er jeres.
+          Ja, vi bruger cookies. Nej, de er ikke nødvendige for, at “Piggy” starter. De er kun til at huske, om I vil have dansk tale eller grise-lyde på originalsproget. I kan slå dem fra. Så virker siden bare lidt dårligere. Valget er jeres.
         </p>
         <h4 class="font-sans text-[36px] text-">4. Ansvar for indhold</h4>
         <p class="font-sans text-[20px]">
-          Alt indhold er håndplukket af voksne, der selv har overlevet forældreskab. Skulle der
-          alligevel snige sig en episode ind, hvor en figur siger “lort”, så tag det op med os –
-          ikke med ungen. Den gentager det alligevel.
+          Alt indhold er håndplukket af voksne, der selv har overlevet forældreskab. Skulle der alligevel snige sig en episode ind, hvor en figur siger “lort”, så tag det op med os – ikke med ungen. Den gentager det alligevel.
         </p>
         <h4 class="font-sans text-[36px] text-">5. Ophavsret</h4>
+        <p class="font-sans text-[20px]">Alt på siden tilhører nogen, der er meget glade for advokater. Kopiér ikke, optag ikke, del ikke på TikTok. Det er ulovligt, og jeres 5-årige får ikke lov til at besøge jer i fængslet.</p>
+        <h4 class="font-sans text-[36px] text-">6. Kontakt os (vi bider ikke – medmindre I er en cookie-tyv)</h4>
         <p class="font-sans text-[20px]">
-          Alt på siden tilhører nogen, der er meget glade for advokater. Kopiér ikke, optag ikke,
-          del ikke på TikTok. Det er ulovligt, og jeres 5-årige får ikke lov til at besøge jer i
-          fængslet.
+          Skriv til hej@bornebiffen.dk eller ring på 88 88 88 88 (vi har valgt et nummer, selv børn kan huske, hvis de skal ringe og brokke sig over, at “Peter Plys” ikke er på dansk). Vi glæder os til at underholde jeres guldklump – og til at I
+          (måske) får 22 minutters ro, mens de ser “Pyjamasheltene” for 49. gang. Med venlig hilsen Holdet bag bornebiffen.dk – Vi tager børneindhold alvorligt. Bare ikke helt stivnakket.
         </p>
-        <h4 class="font-sans text-[36px] text-">
-          6. Kontakt os (vi bider ikke – medmindre I er en cookie-tyv)
-        </h4>
-        <p class="font-sans text-[20px]">
-          Skriv til hej@bornebiffen.dk eller ring på 88 88 88 88 (vi har valgt et nummer, selv børn
-          kan huske, hvis de skal ringe og brokke sig over, at “Peter Plys” ikke er på dansk). Vi
-          glæder os til at underholde jeres guldklump – og til at I (måske) får 22 minutters ro,
-          mens de ser “Pyjamasheltene” for 49. gang. Med venlig hilsen Holdet bag bornebiffen.dk –
-          Vi tager børneindhold alvorligt. Bare ikke helt stivnakket.
-        </p>
+        <div class="place self-center space-x-24">
+          <button class="bg-green-500 px-10 py-3 rounded-full">Enig</button>
+          <button class="bg-red-500 px-10 py-3 rounded-full">Uenig</button>
+        </div>
       </div>
-    </section>
-    <section class="h-100"></section>
-    <video src="videos/BBsequence 01_1.mp4" autoplay muted class="fixed top-0 w-1000"></video>
-    <section class="grid grid-cols-3 gap-20 m-20">
-      <VideoStill src="videos/BBpreview1-cirkeline_1.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview2-bennys.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview3-pingu.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview4-dogpool.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview5-peterpedal.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview6-piggy.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview7-kidstv.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview8-teletubbies.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview9-wallace.mp4" href="singleview" />
-      <VideoStill src="videos/BBpreview10-cars.mp4" href="singleview" />
+      <section class="h-100"></section>
+      <section class="grid grid-cols-3 gap-20 scale-125">
+        <VideoStill src="videos/BBpreview1-cirkeline_1.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview2-bennys.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview3-pingu.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview4-dogpool.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview5-peterpedal.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview6-piggy.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview7-kidstv.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview8-teletubbies.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview9-wallace.mp4" href="singleview" />
+        <VideoStill src="videos/BBpreview10-cars.mp4" href="singleview" />
+      </section>
     </section>
   </main>
 </MainLayout>

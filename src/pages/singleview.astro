@@ -7,6 +7,8 @@ import VideoStill from "../components/VideoStill.astro";
 ---
 
 <MainLayout>
-    <video src="videos/BBsequence 01_1.mp4" muted class="fixed top-0 w-1000 blur-2xl"></video>
-    <div><video class="object-fill place-self-center m-10 w-[80%] relative z-100 rounded-[45px]" src="videos/singleview-wallace.mp4" controls></video></div>
+  <video src="videos/BBsequence 01_1.mp4" muted class="fixed top-0 w-1000 blur-2xl"></video>
+  <div class="flex min-h-screen items-center justify-center">
+    <video class="w-[80%] rounded-[25px] relative z-100" src="videos/singleview-wallace.mp4" controls autoplay loop muted playsinline></video>
+  </div>
 </MainLayout>

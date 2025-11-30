@@ -1,51 +1,44 @@
 ---
 // Props to allow multiple different videos to be rendered from the same component.
 const {
-	src = '/videos/BBpreview1-cirkeline_1.mp4',
-	label = 'Preview video; plays on hover or focus',
-	href = '',
-	wrapperClass = 'w-[100%] h-96 relative bg-white rounded-[45px] overflow-hidden',
-	videoClass = 'w-[100%] h-96 left-0 top-0 absolute object-cover',
+  src = "/videos/BBpreview1-cirkeline_1.mp4",
+  label = "Preview video; plays on hover or focus",
+  href = "",
+  wrapperClass = "aspect-square relative bg-transparent rounded-[45px] overflow-hidden",
+  videoClass = "w-[100%] h-64 w-64 left-0 top-0 absolute object-cover",
 } = Astro.props;
 ---
 
-{href ? (
-	<a
-		href={href}
-		class={wrapperClass}
-		onmouseenter="(async ()=>{const v=this.querySelector('video'); try{await v.play()}catch(e){}})()"
-		onmouseleave="(function(){const v=this.querySelector('video'); v.pause(); v.currentTime = 0})()"
-		onfocus="(async ()=>{const v=this.querySelector('video'); try{await v.play()}catch(e){}})()"
-		onblur="(function(){const v=this.querySelector('video'); v.pause(); v.currentTime = 0})()"
-	>
-		<video
-			class={videoClass}
-			src={src}
-			loop
-			muted
-			playsinline
-			preload="metadata"
-			tabindex="-1"
-			aria-label={label}
-		></video>
-	</a>
-) : (
-	<div class={wrapperClass}>
-		<video
-			class={videoClass}
-			src={src}
-			loop
-			muted
-			playsinline
-			preload="metadata"
-			tabindex="0"
-			aria-label={label}
-			onmouseenter="(async ()=>{try{await this.play()}catch(e){}})()"
-			onmouseleave="this.pause(); this.currentTime = 0"
-			onfocus="(async ()=>{try{await this.play()}catch(e){}})()"
-			onblur="this.pause(); this.currentTime = 0"
-			onclick="(async ()=>{if(this.paused){try{await this.play()}catch(e){}}else{this.pause()}})()"
-			onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); if(this.paused){try{this.play()}catch(e){}}else{this.pause()}}"
-		></video>
-	</div>
-)}
+{
+  href ? (
+    <a
+      href={href}
+      class={wrapperClass}
+      onmouseenter="(async ()=>{const v=this.querySelector('video'); try{await v.play()}catch(e){}})()"
+      onmouseleave="(function(){const v=this.querySelector('video'); v.pause(); v.currentTime = 0})()"
+      onfocus="(async ()=>{const v=this.querySelector('video'); try{await v.play()}catch(e){}})()"
+      onblur="(function(){const v=this.querySelector('video'); v.pause(); v.currentTime = 0})()"
+    >
+      <video class={videoClass} src={src} loop muted playsinline preload="metadata" tabindex="-1" aria-label={label} />
+    </a>
+  ) : (
+    <div class={wrapperClass}>
+      <video
+        class={videoClass}
+        src={src}
+        loop
+        muted
+        playsinline
+        preload="metadata"
+        tabindex="0"
+        aria-label={label}
+        onmouseenter="(async ()=>{try{await this.play()}catch(e){}})()"
+        onmouseleave="this.pause(); this.currentTime = 0"
+        onfocus="(async ()=>{try{await this.play()}catch(e){}})()"
+        onblur="this.pause(); this.currentTime = 0"
+        onclick="(async ()=>{if(this.paused){try{await this.play()}catch(e){}}else{this.pause()}})()"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); if(this.paused){try{this.play()}catch(e){}}else{this.pause()}}"
+      />
+    </div>
+  )
+}
